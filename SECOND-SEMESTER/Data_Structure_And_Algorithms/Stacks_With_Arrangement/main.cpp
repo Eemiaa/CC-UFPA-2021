@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(void){
+    
     int opcao=-1;
     TPnodo* Nodo;
     Nodo = (TPnodo*) malloc(sizeof(TPnodo));

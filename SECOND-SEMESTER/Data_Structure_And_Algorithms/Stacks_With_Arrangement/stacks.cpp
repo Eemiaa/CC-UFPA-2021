@@ -37,6 +37,5 @@ TPnodo desempilhar(TPpilha *pilha){
 } 
 
 int tamanho_da_pilha(TPpilha* pilha){
-    return pilha->topo;
-    
+    return pilha->topo; 
 }

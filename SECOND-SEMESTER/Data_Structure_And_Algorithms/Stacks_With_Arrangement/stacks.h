@@ -1,4 +1,5 @@
 #define MAXTAM 1000
+
 typedef struct tpnodo{
     int chave;
 }TPnodo;
