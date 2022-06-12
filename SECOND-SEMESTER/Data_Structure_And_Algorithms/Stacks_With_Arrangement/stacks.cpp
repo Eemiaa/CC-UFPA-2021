@@ -26,13 +26,16 @@ bool verificar_estado(TPpilha* pilha){
     return (pilha->topo==0);
 }
 
-TPnodo desempilhar(TPpilha *pilha){
+TPnodo* desempilhar(TPpilha *pilha){
+    TPnodo* Nodo;
+    Nodo = (TPnodo*) malloc(sizeof(TPnodo));
     if(verificar_estado(pilha)){
-        cout<<"\nThe stack is empty.\n";
+        return NULL;
     }
     else{
         pilha->topo--;
-        return pilha->nodo[pilha->topo];
+        *Nodo = pilha->nodo[pilha->topo];
+        return Nodo;
     }
 } 
 

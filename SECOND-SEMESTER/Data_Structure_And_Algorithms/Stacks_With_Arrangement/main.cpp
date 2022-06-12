@@ -12,7 +12,6 @@ int main(void){
     TPpilha* Pilha;
     Pilha = init_pilha();
 
-    /*menu*/
     while(opcao!=0){
         cout<<"\nHello user, choose from the options:\n1: stack up;\n2: emptying stack;\n3: check stack status;\n4: unstack;\n5: inform stack size;\n0: exit;\n";
         cin>>opcao;
@@ -27,10 +26,19 @@ int main(void){
             esvaziar_pilha(Pilha);
             break;
         case 3:
-            cout<<endl<<verificar_estado(Pilha)<<endl;
+            if(verificar_estado(Pilha)){
+                cout<<"\nThe pile is empty.\n"<<endl;
+            }else{
+                cout<<"\nThe pile is not empty.\n"<<endl;
+            }
             break;
         case 4:
-            desempilhar(Pilha);
+            Nodo = desempilhar(Pilha);
+            if (Nodo == NULL){
+                cout<<"\nThe stack is empty.\n";
+            }else{
+                cout<<"\nThe value: "<< Nodo->chave<<". Has been successfully unstacked.\n";
+            } 
             break;
         case 5:
             cout<<endl<<tamanho_da_pilha(Pilha)<<endl;

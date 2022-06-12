@@ -3,12 +3,11 @@
 #include "list.h"
 
 using namespace std;
-//ok
+
 TPlista* init_lista(){
     TPlista* list = (TPlista*) malloc(sizeof(TPlista));
     return list;
 }
-//ok
 
 void inserir_nodo(TPlista* lista, TPnodo* Nodo){
     if(lista->posicao_final>=MAXTAM){
@@ -19,16 +18,15 @@ void inserir_nodo(TPlista* lista, TPnodo* Nodo){
     }
 }
 
-//ok
 bool verificar_estado(TPlista* lista){
     return (lista->posicao_final==lista->posicao_inicial);
 }
-//ok
+
 void esvaziar_lista(TPlista* lista){
     lista->posicao_inicial=0;
     lista->posicao_final=lista->posicao_inicial;
 }
-//ok
+
 TPnodo* retirar_nodo(TPlista* lista, int posicao){
     int aux;
     TPnodo* Nodo;
@@ -46,8 +44,8 @@ TPnodo* retirar_nodo(TPlista* lista, int posicao){
 }
 
 void imprimir(TPlista* lista){
-    cout<<"\nposition  |   key\n";
+    cout<<"\nP  |   K\n";
     for(int aux = lista->posicao_inicial; aux < lista->posicao_final; aux++){
-        cout<<aux<< " | "<< lista->nodo[aux].valor<<endl;
+        cout<<aux<< "   |   "<< lista->nodo[aux].valor<<endl;
     }
 }

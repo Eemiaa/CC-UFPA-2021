@@ -16,6 +16,6 @@ void esvaziar_pilha(TPpilha* );
 
 bool verificar_estado(TPpilha* );
 
-TPnodo desempilhar(TPpilha* );
+TPnodo* desempilhar(TPpilha* );
 
 int tamanho_da_pilha(TPpilha* );
