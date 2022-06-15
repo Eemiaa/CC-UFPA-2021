@@ -13,6 +13,9 @@ typedef struct tpfila{
     apontador frente, tras;
 }TPfila;
 
+void incluir(TPfila*, int, char, int, int);
+
+
 TPfila* init_fila();
 void esvaziar(TPfila* );
 bool estado(TPfila*);
