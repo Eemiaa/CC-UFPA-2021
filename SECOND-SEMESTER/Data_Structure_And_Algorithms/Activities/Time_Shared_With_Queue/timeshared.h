@@ -1,3 +1,4 @@
+
 typedef struct tpnodo{
     int id;
     char name[100];

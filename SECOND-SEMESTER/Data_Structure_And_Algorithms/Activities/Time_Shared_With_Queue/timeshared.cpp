@@ -21,7 +21,6 @@ void enfileirar(TPnodo x, TPfila* fila){
     fila->tras->nodo = x;
     fila->tras->proximo = NULL;
 }
-
 void fura_fila_priority(TPnodo x, TPfila* fila){
     if(tamanho(fila)>0){
         apontador p = (apontador) malloc(sizeof(Celula));
@@ -68,11 +67,14 @@ void fura_fila_wait(TPfila* fila){
 
 void fura_fila_desenfileira(TPfila* fila, int posicao){
     apontador p = (apontador) malloc(sizeof(Celula));
+    apontador lixo = (apontador) malloc(sizeof(Celula));
     p=fila->frente;
     for(int i=1; i<posicao; i++){
         p = p->proximo;
     }  
+    lixo = p->proximo;
     p->proximo = p->proximo->proximo;
+    free(lixo);
 }
 
 TPnodo desenfileirar(TPfila* fila){
